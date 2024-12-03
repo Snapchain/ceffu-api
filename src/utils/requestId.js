@@ -8,6 +8,11 @@ const generateRequestId = (apiIdentifier) => {
     String(date.getMinutes()).padStart(2, '0');
   const randomNum = Math.floor(Math.random() * 90000000 + 10000000);
   const requestId = `SNAP_PIVOTAL_${apiIdentifier}_${timestamp}_${randomNum}`;
+  
+  if (requestId.length > 50) {
+    throw new Error(`Request ID exceeds maximum length of 50 characters: ${requestId}`);
+  }
+  
   console.log(`requestId: ${requestId}`);
   return requestId;
 };
