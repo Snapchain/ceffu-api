@@ -1,0 +1,15 @@
+{
+  "name": "ceffu-api",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "babylon:validators": "node src/scripts/getValidators.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
