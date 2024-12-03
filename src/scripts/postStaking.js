@@ -14,7 +14,7 @@ async function postStaking() {
       stakingAddress: `${process.env.STAKING_DESTINATION_ADDRESS_OR_WALLETID}`,
       validatorPkHex: `${process.env.STAKING_VALIDATOR_PK}`, // BSquaredNetwork
       amount: `${process.env.STAKING_AMOUNT}`, // BTC amount for staking, 1 means 1 BTC
-      isBroadcast: 0, // 1 : broadcast after signing 0: dont broadcast
+      isBroadcast: `${process.env.STAKING_BROADCAST}`, // 1 : broadcast after signing 0: dont broadcast
     };
     const response = await makePOSTRequest('/open-api/v1/wallet/cosign/babylon/staking', body);
     console.log('Staking response:', response);
