@@ -1,3 +1,4 @@
+// format: SNAP_PIVOTAL_<apiIdentifier>_202412030356_<8 digits random number>
 const generateRequestId = (apiIdentifier) => {
   const date = new Date();
   const timestamp = date.getFullYear() +
