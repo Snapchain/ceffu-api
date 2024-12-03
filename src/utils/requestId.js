@@ -11,5 +11,4 @@ const generateRequestId = (apiIdentifier) => {
   return requestId;
 };
 
-
 module.exports = { generateRequestId }; 
