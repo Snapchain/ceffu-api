@@ -9,9 +9,12 @@ async function postStaking() {
     const body = {
       timestamp,
       requestId: generateRequestId('staking'),
-      fromAddress: `${process.env.STAKING_FROM_ADDRESS_OR_WALLETID}`, 
-      changeAddress: `${process.env.STAKING_CHANGE_ADDRESS_OR_WALLETID}`,
-      stakingAddress: `${process.env.STAKING_DESTINATION_ADDRESS_OR_WALLETID}`,
+      fromWalletId: `${process.env.STAKING_FROM_WALLETID}`,
+      fromAddress: `${process.env.STAKING_FROM_ADDRESS}`, 
+      changeWalletId: `${process.env.STAKING_CHANGE_WALLETID}`,
+      changeAddress: `${process.env.STAKING_CHANGE_ADDRESS}`,
+      stakingWalletId: `${process.env.STAKING_DESTINATION_WALLETID}`,
+      stakingAddress: `${process.env.STAKING_DESTINATION_ADDRESS}`,
       validatorPkHex: `${process.env.STAKING_VALIDATOR_PK}`, // BSquaredNetwork
       amount: `${process.env.STAKING_AMOUNT}`, // BTC amount for staking, 1 means 1 BTC
       isBroadcast: `${process.env.STAKING_BROADCAST}`, // 1 : broadcast after signing 0: dont broadcast
