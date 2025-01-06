@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "babylon:validators": "node src/scripts/getValidators.js",
-    "babylon:staking": "node src/scripts/postStaking.js"
+    "babylon:staking": "node src/scripts/postStaking.js",
+    "babylon:unbonding": "node src/scripts/postUnbonding.js"
   },
   "keywords": [],
   "author": "",
